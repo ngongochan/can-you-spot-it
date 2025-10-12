@@ -1,14 +1,14 @@
 import { useParams, useNavigate } from "react-router-dom";
 
 export default function ResultPage() {
-  const { ID } = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
 
-  const nextID = Number(ID) + 1;
+  const nextID = Number(id) + 1;
 
   return (
     <div>
-      <h2>Results for item #{ID}</h2>
+      <h2>Results for item #{id}</h2>
       <p>Option A: 60%</p>
       <p>Option B: 40%</p>
 

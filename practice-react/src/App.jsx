@@ -7,8 +7,9 @@ export default function App() {
     <div style={{ fontFamily: "sans-serif", textAlign: "center" }}>
       <h1>Voting App Demo 🗳️</h1>
       <nav style={{ marginBottom: 20 }}>
-        <Link to="/vote/1">Vote 1</Link> |{" "}
-        <Link to="/result/1">Result 1</Link>
+        {/* <Link to="/vote/1">Vote 1</Link> */}
+        {/* <button to="/vote/1">START</button> */}
+        <button><Link to="/vote/1">START</Link></button>
       </nav>
 
       <Routes>
