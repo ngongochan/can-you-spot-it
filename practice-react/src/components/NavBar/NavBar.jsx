@@ -14,7 +14,7 @@ function NavBar() {
 
     return(
     <div style={{ justifyContent: "space-between", width: "330px",
-        display: "flex", margin: "0 auto", alignItems: "center"
+        display: "flex", margin: "0 auto", alignItems: "center", padding: "0"
     }}>
         <img src="/cysi.png" alt="" style={{ height: "80px" }}/>
         <div>
