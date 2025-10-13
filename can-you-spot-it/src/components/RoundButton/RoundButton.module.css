@@ -8,8 +8,10 @@
     box-shadow: 0 1px 1px grey;
     font-size: 1.2rem;
     margin: 5px;
+
     /* display: flex;            centers content */
     align-items: center;      /* vertically center */
     justify-content: center;  /* horizontally center */
+
     color: black;
 }

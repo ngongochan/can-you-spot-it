@@ -19,5 +19,11 @@
     border: solid 1px black;
     border-radius: 5px;
     margin: 0 2.5px;
-    padding: 0
+    padding: 0;
+    animation: growBar 1.2s ease-out forwards; /* grow to full height */
+}
+
+@keyframes growBar {
+    from { height: 0; }
+    to   { height: 67% }     /* final bar height */
 }
