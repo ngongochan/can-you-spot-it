@@ -24,7 +24,7 @@ export default function VotePage() {
         <Card/>
       </div>      
 
-      <PillButton func="AI-GENERATED" bgColor="#FFCCCC" textColor="black"
+      <PillButton func="AI-GENERATED" bgColor="#ff6666" textColor="black"
                   className="vote-buton ai" onClick={() => handleVote("AI-GENERATED")}/>
       <PillButton func="HUMANMADE" bgColor="#90EE90" textColor="black"
                   className="vote-buton ai" onClick={() => handleVote("HUMANMADE")}/>

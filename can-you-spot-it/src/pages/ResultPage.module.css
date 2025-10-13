@@ -1,0 +1,11 @@
+.results {
+    width: 330px;
+    height: 270px;
+    /* background-color: aliceblue; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* pushes left and right sections apart */
+    align-items: flex-start;        /* aligns items at the top */
+    position: relative;
+    padding: 0
+}

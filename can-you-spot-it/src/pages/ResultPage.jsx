@@ -3,6 +3,10 @@ import PillButton from "../components/PillButton/PillButton.jsx";
 import RoundButton from "../components/RoundButton/RoundButton.jsx";
 import Card from "../components/Card/Card.jsx";
 import NavBar from "../components/NavBar/NavBar.jsx";
+import Description from "../components/Description/Description.jsx";
+import SmallCard from "../components/SmallCard/SmallCard.jsx";
+import BarChart from "../components/BarChart/BarChart.jsx";
+import styles from "./ResultPage.module.css"
 
 import { MAX_ITEMS } from "../config";
 
@@ -28,11 +32,15 @@ export default function ResultPage() {
   return (
     <div>
       <NavBar/>
-      <h2>Results for item #{id}</h2>
+      {/* <h2>Results for item #{id}</h2>
       <p>Option A: 60%</p>
-      <p>Option B: 40%</p>
-
-      <RoundButton  icon={faArrowRight} onClick={ handleNext }/>
+      <p>Option B: 40%</p> */}
+      <div className = { styles.results }>
+        <SmallCard />
+        <BarChart />
+      </div>
+      <Description></Description>
+      <RoundButton  icon={faArrowRight} color="black" onClick={ handleNext }/>
     </div>
   );
 }

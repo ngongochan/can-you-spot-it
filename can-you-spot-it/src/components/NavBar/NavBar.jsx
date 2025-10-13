@@ -23,8 +23,8 @@ function NavBar() {
     }}>
         <img src="/cysi.png" alt="" style={{ height: "80px" }}/>
         <div>
-            <RoundButton  icon={faHouse} onClick={() => navigate(`/`)}/>
-            <RoundButton  icon={faArrowRotateLeft} onClick={ handleBack }/>
+            <RoundButton  icon={faHouse} color="black" onClick={() => navigate(`/`)}/>
+            <RoundButton  icon={faArrowRotateLeft} color="black" onClick={ handleBack }/>
         </div>
     </div>
     );
