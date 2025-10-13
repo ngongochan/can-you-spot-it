@@ -4,6 +4,7 @@ import RoundButton from "../components/RoundButton/RoundButton.jsx";
 import Card from "../components/Card/Card.jsx";
 import NavBar from "../components/NavBar/NavBar.jsx";
 
+import { MAX_ITEMS } from "../config";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
@@ -13,8 +14,16 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 export default function ResultPage() {
   const { id } = useParams();
   const navigate = useNavigate();
-
+  const currentID = parseInt(id);
   const nextID = Number(id) + 1;
+
+  const handleNext = () => {
+    if (currentID < MAX_ITEMS) {
+      navigate(`/vote/${currentID + 1}`);
+    } else {
+      navigate(`/final`);
+    }
+  };
 
   return (
     <div>
@@ -23,7 +32,7 @@ export default function ResultPage() {
       <p>Option A: 60%</p>
       <p>Option B: 40%</p>
 
-      <RoundButton  icon={faArrowRight} onClick={() => navigate(`/vote/${nextID}`)}/>
+      <RoundButton  icon={faArrowRight} onClick={ handleNext }/>
     </div>
   );
 }

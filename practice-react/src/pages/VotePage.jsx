@@ -4,7 +4,6 @@ import RoundButton from "../components/RoundButton/RoundButton.jsx";
 import Card from "../components/Card/Card.jsx";
 import NavBar from "../components/NavBar/NavBar.jsx";
 
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
@@ -25,9 +24,9 @@ export default function VotePage() {
         <Card/>
       </div>      
 
-      <PillButton func="AI-GENERATED" bgColor="#FFCCCC"
+      <PillButton func="AI-GENERATED" bgColor="#FFCCCC" textColor="black"
                   className="vote-buton ai" onClick={() => handleVote("AI-GENERATED")}/>
-      <PillButton func="HUMANMADE" bgColor="#90EE90"
+      <PillButton func="HUMANMADE" bgColor="#90EE90" textColor="black"
                   className="vote-buton ai" onClick={() => handleVote("HUMANMADE")}/>
       <br />
     </div>

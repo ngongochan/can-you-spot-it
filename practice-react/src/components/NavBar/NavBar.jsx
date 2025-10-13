@@ -11,6 +11,11 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 function NavBar() {
     const { id } = useParams();
     const navigate = useNavigate();
+    const currentID = parseInt(id);
+    const handleBack = () => {
+        if (currentID > 1) navigate(`/vote/${currentID - 1}`)
+        else navigate(`/`)
+    };
 
     return(
     <div style={{ justifyContent: "space-between", width: "330px",
@@ -19,7 +24,7 @@ function NavBar() {
         <img src="/cysi.png" alt="" style={{ height: "80px" }}/>
         <div>
             <RoundButton  icon={faHouse} onClick={() => navigate(`/`)}/>
-            <RoundButton  icon={faArrowRotateLeft} onClick={() => navigate(`/vote/${id - 1}`)}/>
+            <RoundButton  icon={faArrowRotateLeft} onClick={ handleBack }/>
         </div>
     </div>
     );

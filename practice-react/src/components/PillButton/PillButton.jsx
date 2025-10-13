@@ -1,6 +1,6 @@
 import styles from "./PillButton.module.css"
 
-function PillButton({ func, onClick, bgColor = "white", textColor = "black" }) {
+function PillButton({ func, onClick, bgColor = "black", textColor = "white" }) {
     return(
         <button className = {styles.pillButton}
                 onClick={onClick}
