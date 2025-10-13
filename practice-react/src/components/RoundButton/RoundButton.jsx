@@ -1,10 +1,11 @@
 import styles from "./RoundButton.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-function RoundButton({icon}) {
+function RoundButton({ icon, onClick }) {
     return(
-        <button className={styles.roundButton}>
-          <FontAwesomeIcon icon={icon} />
+        <button className = {styles.roundButton}
+                onClick = {onClick}>
+          <FontAwesomeIcon icon = {icon} />
         </button>
     );
 }
