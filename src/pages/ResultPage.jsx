@@ -37,7 +37,7 @@ export default function ResultPage({ items }) {
         <BarChart type={ items[id].type }/>
       </div>
       <Description desc={ items[id].description }/>
-      <RoundButton  icon={faArrowRight} color="black" onClick={ handleNext }/>
+      <RoundButton  icon={ faArrowRight } color="black" onClick={ handleNext }/>
     </div>
   );
 }
