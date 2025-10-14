@@ -15,7 +15,7 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-export default function ResultPage({ items }) {
+export default function ResultPage({ votes }) {
   const { id } = useParams();
   const navigate = useNavigate();
   const currentID = parseInt(id);
@@ -33,10 +33,10 @@ export default function ResultPage({ items }) {
     <div>
       <NavBar />
       <div className={ styles.results }>
-        <SmallCard imageSrc={ items[id].src }/>
-        <BarChart type={ items[id].type }/>
+        <SmallCard imageSrc={ votes[currentID].src }/>
+        <BarChart type={ votes[currentID].type }/>
       </div>
-      <Description desc={ items[id].description }/>
+      <Description desc={ votes[currentID].description }/>
       <RoundButton  icon={ faArrowRight } color="black" onClick={ handleNext }/>
     </div>
   );

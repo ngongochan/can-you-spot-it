@@ -9,9 +9,11 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-export default function VotePage({ items }) {
+export default function VotePage({ votes }) {
   const { id } = useParams();
   const navigate = useNavigate();
+  const currentID = parseInt(id);
+  // const nextID = Number(id) + 1;
 
   // var ai_vote = items[i].ai_vote;
   // var human_vote = items[i].human_vote;
@@ -22,7 +24,7 @@ export default function VotePage({ items }) {
     // } else {
     //   human_vote += 1;
     // }
-    navigate(`/result/${id}`); // go to ResultPage after voting
+    navigate(`/result/${currentID}`); // go to ResultPage after voting
   };
 
   return (
@@ -32,7 +34,7 @@ export default function VotePage({ items }) {
         {/* {items.map((item) => (
               <Card imageSrc={item.src} />
         ))} */}
-        <Card imageSrc = { items[id].src } />
+        <Card imageSrc = { votes[currentID].src } />
       </div>
     
       <PillButton func="AI-GENERATED" bgColor="#F19595" textColor="black"
