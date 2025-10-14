@@ -21,7 +21,7 @@ export default function VotePage({ votes }) {
     if (error) {
       console.error("Vote update failed:", error);
     } else {
-      navigate(`/result/${currentID}`); // go to results page
+      navigate(`/result/${currentID}`); // go to ResultPage
     }
   };
 

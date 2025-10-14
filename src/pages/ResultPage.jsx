@@ -18,7 +18,6 @@ export default function ResultPage({ votes }) {
 
   const [currentVote, setCurrentVote] = useState(null);
 
-  // 🟢 Fetch the most recent data on load
   useEffect(() => {
     const fetchCurrentVote = async () => {
       const { data, error } = await supabase
