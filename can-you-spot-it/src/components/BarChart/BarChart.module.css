@@ -16,7 +16,7 @@
 .oneColumn {
     width: 64px;
     height: 180px;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     border-radius: 5px;
     margin: 0 2.5px;
     padding: 0;
