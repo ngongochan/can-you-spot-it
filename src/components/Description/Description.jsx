@@ -1,6 +1,6 @@
 import styles from "./Description.module.css"
 
-function Description({ imageSrc, desc }) {
+function Description({ desc }) {
     return(
         <div className = {styles.desc}>
             <div className = {styles.descBox} >

@@ -13,13 +13,31 @@ import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function App() {
+  const items = [
+    { id: 0, src: '#', type: 'AI-GENERATED', ai_vote: 0, human_vote: 0, description: 'NULL' },
+    { id: 1, src: '/img/astronaut', type: 'AI-GENERATED', ai_vote: 0, human_vote: 0, description: 'An Astronaut' },
+    { id: 2, src: '/img/flamingone', type: 'HUMANMADE', ai_vote: 0, human_vote: 0, description: 
+        `Miles Astray’s picture “F L A M I N G O N E” won the People’s Vote and a Jury Award in the artificial intelligence category of 1839 Awards 
+        The twist was: Artificial intelligence had nothing to do with Astray’s photo. He shot it with a camera. And that’s why it later got disqualified from the 1839 Awards.` },
+    { id: 3, src: '/img/building', type: 'HUMANMADE', ai_vote: 0, human_vote: 0, description: 'Todor, our teammate, took this photo with his phone!!!' },
+    { id: 4, src: '/img/Midjourney', type: 'AI-GENERATED', ai_vote: 0, human_vote: 0, description: 
+        `In August 2022, Allen, a game designer who lives in Pueblo West, Colorado, won first place in the emerging artist division’s “digital arts/digitally-manipulated photography” category at the Colorado State Fair Fine Arts Competition.<br>
+        His winning image, titled “Théâtre D’opéra Spatial” (French for “Space Opera Theater”), was made with Midjourney — an artificial intelligence system that can produce detailed images when fed written prompts. A $300 prize accompanied his win.` },
+    { id: 5, src: '/img/astronaut', type: 'AI-GENERATED', ai_vote: 0, human_vote: 0, description: 'An Astronaut' },
+    { id: 6, src: '/img/astronaut', type: 'AI-GENERATED', ai_vote: 0, human_vote: 0, description: 'An Astronaut' },
+    { id: 7, src: '/img/astronaut', type: 'AI-GENERATED', ai_vote: 0, human_vote: 0, description: 'An Astronaut' },
+    { id: 8, src: '/img/astronaut', type: 'AI-GENERATED', ai_vote: 0, human_vote: 0, description: 'An Astronaut' },
+    { id: 9, src: '/img/astronaut', type: 'AI-GENERATED', ai_vote: 0, human_vote: 0, description: 'An Astronaut' },
+    { id:10, src: '/img/astronaut', type: 'AI-GENERATED', ai_vote: 0, human_vote: 0, description: 'An Astronaut' },
+  ]
+
   return (
     <div style={{ textAlign: "center", justifyContent: "center" }}>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/final" element={<FinalPage />} />
-        <Route path="/vote/:id" element={<VotePage />} />
-        <Route path="/result/:id" element={<ResultPage />} />
+        <Route path="/final" element={<FinalPage/>} />
+        <Route path="/vote/:id" element={<VotePage items={ items }/>} />
+        <Route path="/result/:id" element={<ResultPage items={ items } />} />
       </Routes>
     </div>
   );

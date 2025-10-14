@@ -15,14 +15,14 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-export default function ResultPage() {
+export default function ResultPage({ items }) {
   const { id } = useParams();
   const navigate = useNavigate();
   const currentID = parseInt(id);
   const nextID = Number(id) + 1;
 
   const handleNext = () => {
-    if (currentID < MAX_ITEMS) {
+    if (currentID <= MAX_ITEMS - 1) {
       navigate(`/vote/${currentID + 1}`);
     } else {
       navigate(`/final`);
@@ -32,14 +32,11 @@ export default function ResultPage() {
   return (
     <div>
       <NavBar/>
-      {/* <h2>Results for item #{id}</h2>
-      <p>Option A: 60%</p>
-      <p>Option B: 40%</p> */}
-      <div className = { styles.results }>
-        <SmallCard />
-        <BarChart />
+      <div className={ styles.results }>
+        <SmallCard imageSrc={ items[id].src }/>
+        <BarChart type={ items[id].type }/>
       </div>
-      <Description></Description>
+      <Description desc={ items[id].description }/>
       <RoundButton  icon={faArrowRight} color="black" onClick={ handleNext }/>
     </div>
   );

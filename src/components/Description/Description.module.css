@@ -8,12 +8,15 @@
 }
 
 .descBox {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Afacad";
+    font-size: .8rem; 
     width: 330px;
     height: 200px;
+    padding: 5px;
     border-radius: 10px;
     border: 1px solid black;
     margin: 0 auto;
     background-color: lightgray;
-    color: black
+    color: black;
+    text-align: left;
 }

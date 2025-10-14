@@ -9,7 +9,7 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-export default function VotePage() {
+export default function VotePage({ items }) {
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -21,9 +21,12 @@ export default function VotePage() {
     <div style={{ textAlign: "center", justifyContent: "center" }}>
       <NavBar/>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <Card/>
-      </div>      
-
+        {/* {items.map((item) => (
+              <Card imageSrc={item.src} />
+        ))} */}
+        <Card imageSrc = { items[id].src } />
+      </div>
+    
       <PillButton func="AI-GENERATED" bgColor="#ff6666" textColor="black"
                   className="vote-buton ai" onClick={() => handleVote("AI-GENERATED")}/>
       <PillButton func="HUMANMADE" bgColor="#90EE90" textColor="black"
