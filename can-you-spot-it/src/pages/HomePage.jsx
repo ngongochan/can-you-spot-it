@@ -5,7 +5,7 @@ function HomePage() {
   return (
     <div>
       <img  style={{ height: "160px", marginTop: "200px" }}
-            src="/cysi.png" alt=""/>
+            src="/cysi.svg" alt=""/>
       <br /> <br /> <br /> <br />
       <Link to="/vote/1">
         <PillButton func="START"></PillButton>

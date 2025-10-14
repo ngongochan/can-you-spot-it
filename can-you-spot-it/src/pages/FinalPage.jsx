@@ -5,7 +5,7 @@ function FinalPage() {
   return (
     <div>
       <img  style={{ height: "200px", marginTop: "200px" }}
-            src="/cysi.png" alt=""/>
+            src="/how-many.svg" alt=""/>
       <br /> <br /> <br /> <br />
       <Link to="/vote/1">
         <PillButton func="RESTART"></PillButton>
