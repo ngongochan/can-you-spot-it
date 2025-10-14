@@ -17,7 +17,7 @@ export default function App() {
     { id: 0, src: '#', type: 'AI-GENERATED', ai_vote: 0, human_vote: 0, description: 'NULL' },
     { id: 1, src: '/img/astronaut.jpg', type: 'AI-GENERATED', ai_vote: 0, human_vote: 0, description: 'An Astronaut' },
     { id: 2, src: '/img/flamingone.jpg', type: 'HUMANMADE', ai_vote: 0, human_vote: 0, description: 
-        `Miles Astray’s picture “F L A M I N G O N E” won the People’s Vote and a Jury Award in the artificial intelligence category of 1839 Awards 
+        `Miles Astray’s picture “F L A M I N G O N E” won the People’s Vote and a Jury Award in the artificial intelligence category of 1839 Awards.
         The twist was: Artificial intelligence had nothing to do with Astray’s photo. He shot it with a camera. And that’s why it later got disqualified from the 1839 Awards.` },
     { id: 3, src: '/img/building.jpg', type: 'HUMANMADE', ai_vote: 0, human_vote: 0, description: 'Todor, our teammate, took this photo with his phone!!!' },
     { id: 4, src: '/img/Midjourney.jpg', type: 'AI-GENERATED', ai_vote: 0, human_vote: 0, description: 

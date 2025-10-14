@@ -1,14 +1,14 @@
 import styles from "./BarChart.module.css"
 
-function BarChart({ type }) {
+function BarChart({ type, ai_vote, human_vote }) {
     return(
         <div className = { styles.barChart } >
             <p>{ type }!!</p>
             <div className={ styles.twoColumns }>
-                <div className={ styles.oneColumn } style={{ backgroundColor: "#90EE90", height: "67%"}}>
+                <div className={ styles.oneColumn } style={{ backgroundColor: "#CBFFBB", height: "67%"}}>
                     <p>67%</p>
                 </div>
-                <div className={ styles.oneColumn } style={{ backgroundColor: "#ff6666", height: "33%"}}>
+                <div className={ styles.oneColumn } style={{ backgroundColor: "#F19595", height: "33%"}}>
                     <p>33%</p>
                 </div>
             </div>

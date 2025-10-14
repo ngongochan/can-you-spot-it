@@ -31,7 +31,7 @@ export default function ResultPage({ items }) {
 
   return (
     <div>
-      <NavBar/>
+      <NavBar />
       <div className={ styles.results }>
         <SmallCard imageSrc={ items[id].src }/>
         <BarChart type={ items[id].type }/>

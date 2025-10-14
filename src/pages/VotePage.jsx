@@ -13,7 +13,15 @@ export default function VotePage({ items }) {
   const { id } = useParams();
   const navigate = useNavigate();
 
+  // var ai_vote = items[i].ai_vote;
+  // var human_vote = items[i].human_vote;
+
   const handleVote = (option) => {
+    // if (option === "AI-GENERATED") {
+    //   ai_vote += 1;
+    // } else {
+    //   human_vote += 1;
+    // }
     navigate(`/result/${id}`); // go to ResultPage after voting
   };
 
@@ -27,9 +35,9 @@ export default function VotePage({ items }) {
         <Card imageSrc = { items[id].src } />
       </div>
     
-      <PillButton func="AI-GENERATED" bgColor="#ff6666" textColor="black"
+      <PillButton func="AI-GENERATED" bgColor="#F19595" textColor="black"
                   className="vote-buton ai" onClick={() => handleVote("AI-GENERATED")}/>
-      <PillButton func="HUMANMADE" bgColor="#90EE90" textColor="black"
+      <PillButton func="HUMANMADE" bgColor="#CBFFBB" textColor="black"
                   className="vote-buton ai" onClick={() => handleVote("HUMANMADE")}/>
       <br />
     </div>
