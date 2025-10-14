@@ -34,7 +34,7 @@ export default function ResultPage({ votes }) {
       <NavBar />
       <div className={ styles.results }>
         <SmallCard imageSrc={ votes[currentID].src }/>
-        <BarChart type={ votes[currentID].type }/>
+        <BarChart type={ votes[currentID].type } ai_vote={ votes[currentID].ai_vote } human_vote={ votes[currentID].human_vote }/>
       </div>
       <Description desc={ votes[currentID].description }/>
       <RoundButton  icon={ faArrowRight } color="black" onClick={ handleNext }/>

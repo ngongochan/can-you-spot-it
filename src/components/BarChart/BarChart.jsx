@@ -1,15 +1,37 @@
+import { useEffect, useState } from "react";
 import styles from "./BarChart.module.css"
 
 function BarChart({ type, ai_vote, human_vote }) {
+    const total_votes = ai_vote + human_vote;
+
+    // avoid division by zero
+    const ai_percentage = total_votes ? Math.round((ai_vote / total_votes) * 100) : 0;
+    const human_percentage = total_votes ? Math.round((human_vote / total_votes) * 100) : 0;
+
+    const [animate, setAnimate] = useState(false);
+
+    useEffect(() => {
+        // Trigger animation after mount
+        setAnimate(true);
+    }, []);
+
     return(
         <div className = { styles.barChart } >
             <p>{ type ? "HUMANMADE" : "AI-GENERATED" }!!</p>
             <div className={ styles.twoColumns }>
-                <div className={ styles.oneColumn } style={{ backgroundColor: "#CBFFBB", height: "67%"}}>
-                    <p>{ parseInt(ai_vote) + 1 }%</p>
+                <div  className={ styles.leftColumn } 
+                      style={{ backgroundColor: "#CBFFBB",
+                               "--target--human-height": `${ human_percentage }%`,
+                               transition: "height 1.2s ease-out" }}
+                >
+                    <p>{ human_percentage }%</p>
                 </div>
-                <div className={ styles.oneColumn } style={{ backgroundColor: "#F19595", height: "33%"}}>
-                    <p>{ human_vote }%</p>
+                <div  className={ styles.rightColumn }
+                      style={{ backgroundColor: "#F19595",
+                               "--target-ai-height": `${ ai_percentage }%`,
+                               transition: "height 1.2s ease-out" }}
+                >
+                    <p>{ ai_percentage }%</p>
                 </div>
             </div>
             <p>WHAT OTHERS THINK</p>
