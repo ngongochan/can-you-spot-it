@@ -13,32 +13,28 @@
     padding: 0
 }
 
-.rightColumn {
+.rightColumn, .leftColumn {
     width: 64px;
     height: 180px;
     /* border: solid 1px black; */
     border-radius: 5px;
     margin: 0 2.5px;
     padding: 0;
+}
+.rightColumn {
     animation: growRight 1.2s ease-out forwards;
 }
 
-@keyframes growRight {
-  0% { height: 0%; }
-  100% { height: var(--target-ai-height); }
-}
-
 .leftColumn {
-    width: 64px;
-    height: 180px;
-    /* border: solid 1px black; */
-    border-radius: 5px;
-    margin: 0 2.5px;
-    padding: 0;
     animation: growLeft 1.2s ease-out forwards;
 }
 
 @keyframes growLeft {
   0% { height: 0%; }
-  100% { height: var(--target-human-height); }
+  100% { height: var(--target-human-height, 0%); }
+}
+
+@keyframes growRight {
+  0% { height: 0%; }
+  100% { height: var(--target-ai-height, 0%); } /* fallback 0% */
 }
