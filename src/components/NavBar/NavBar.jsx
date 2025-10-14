@@ -1,12 +1,8 @@
 import { useParams, useNavigate } from "react-router-dom";
-import PillButton from "../PillButton/PillButton.jsx";
 import RoundButton from "../RoundButton/RoundButton.jsx";
-import Card from "../Card/Card.jsx";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 function NavBar() {
     const { id } = useParams();

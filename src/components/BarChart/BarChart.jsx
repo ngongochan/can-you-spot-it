@@ -8,17 +8,16 @@ function BarChart({ type, ai_vote, human_vote }) {
 
     return(
         <div className = { styles.barChart } >
-            <p>{ type ? "HUMANMADE" : "AI-GENERATED" }!!</p>
+            <p style={{ color: type === false ? "#F19595" : "#CBFFBB" }}
+            >
+                { type ? "HUMANMADE" : "AI-GENERATED" }!!</p>
             <div className={ styles.twoColumns }>
                 <div  
                     className={ styles.leftColumn }
                     style={{
                         backgroundColor: "#CBFFBB",
                         "--target-human-height": `${ human_percentage }%`,
-                        position: "relative",
-                        display: "flex",
                         alignItems: human_percentage < 20 ? "flex-end" : "flex-start",
-                        justifyContent: "center",
                     }}
                     >
                     <p
@@ -37,10 +36,7 @@ function BarChart({ type, ai_vote, human_vote }) {
                     style={{
                         backgroundColor: "#F19595",
                         "--target-ai-height": `${ ai_percentage }%`,
-                        position: "relative",
-                        display: "flex",
                         alignItems: ai_percentage < 20 ? "flex-end" : "flex-start",
-                        justifyContent: "center",
                     }}
                     >
                     <p
