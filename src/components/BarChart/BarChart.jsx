@@ -8,7 +8,7 @@ function BarChart({ type, ai_vote, human_vote }) {
 
     return(
         <div className = { styles.barChart } >
-            <p style={{ color: type === false ? "#F19595" : "#CBFFBB" }}
+            <p style={{ color: type === false ? "#C50000" : "#00840F" }}
             >
                 { type ? "HUMANMADE" : "AI-GENERATED" }!!</p>
             <div className={ styles.twoColumns }>

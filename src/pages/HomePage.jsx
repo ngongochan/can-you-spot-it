@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import PillButton from "../components/PillButton/PillButton";
+import styles from "./HomePage.module.css";
 
 function HomePage() {
   return (
@@ -9,7 +10,13 @@ function HomePage() {
       <br />
       <img  style={{ height: "160px", marginTop: "80px" }}
             src="/cysi.svg" alt=""/>
-      <br /> <br /> <br /> <br />
+      <br />
+      <p className={ styles.paragraph }>
+        Think you can tell what’s real and what’s AI?
+        <br />
+        Take this challenge and put your instincts to the test!
+      </p>
+      <br />
       <Link to="/vote/1">
         <PillButton func="START"></PillButton>
       </Link>
