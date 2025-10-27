@@ -8,17 +8,19 @@ function HomePage() {
       <img  style={{ height: "160px", marginTop: "0px" }}
             src="/top-pattern.svg" alt=""/>
       <br />
-      <img  style={{ height: "160px", marginTop: "80px" }}
-            src="/cysi.svg" alt=""/>
+      <img  style={{ height: "220px", marginTop: "40px" }}
+            src="/real-or-ai.svg" alt=""/>
+      <br /><br />
+      <Link to="/CYSA">
+        <PillButton style={{ width: "150px"}} func="CAN YOU SPOT AI"></PillButton>
+      </Link>
       <br />
-      <p className={ styles.paragraph }>
-        Think you can tell what’s real and what’s AI?
-        <br />
-        Take this challenge and put your instincts to the test!
-      </p>
+      <Link to="/">
+        <PillButton func="DEBATE WALL"></PillButton>
+      </Link>
       <br />
-      <Link to="/vote/1">
-        <PillButton func="START"></PillButton>
+      <Link to="/">
+        <PillButton func="THE AI NEWS"></PillButton>
       </Link>
       <br />
       <img  style={{ height: "160px", marginBottom: "0px" }}

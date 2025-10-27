@@ -25,7 +25,6 @@ export default function ResultPage({ votes }) {
         .select("*")
         .eq("id", currentID)
         .single();
-
       if (error) console.error("Failed to fetch vote:", error);
       else setCurrentVote(data);
     };

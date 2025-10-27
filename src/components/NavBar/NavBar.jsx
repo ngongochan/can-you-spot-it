@@ -17,7 +17,7 @@ function NavBar() {
     <div style={{ justifyContent: "space-between", width: "330px",
         display: "flex", margin: "0 auto", alignItems: "center", padding: "0"
     }}>
-        <img src="/cysi.svg" alt="" style={{ height: "80px" }}/>
+        <img src="/cysa.svg" alt="" style={{ height: "80px" }}/>
         <div>
             <RoundButton  icon={faHouse} color="black" onClick={() => navigate(`/`)}
                         style={{ backgroundColor: "#A0D8F6" }}/>
