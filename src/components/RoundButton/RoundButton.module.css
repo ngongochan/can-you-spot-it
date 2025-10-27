@@ -2,7 +2,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
     cursor: pointer;
     border: none;
     box-shadow: 0 1px 1px grey;

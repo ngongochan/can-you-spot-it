@@ -3,7 +3,7 @@ import PillButton from "../components/PillButton/PillButton";
 import styles from "./CYSA.module.css";
 import ROA_NavBar from "../components/NavBar/ROA_NavBar";
 
-function CYSA() {
+function TheAINews() {
   return (
     <div>
       <ROA_NavBar
@@ -12,18 +12,18 @@ function CYSA() {
             src="/top-pattern.svg" alt=""/> */}
       <br />
       <img  style={{ height: "160px", marginTop: "80px" }}
-            src="/cysa.svg" alt=""/>
-      <br />
+            src="/tan.svg" alt=""/>
+      <br /><br />
       <p className={ styles.paragraph }>
-        Think you can tell what’s real and what’s AI?
+        Stay sharp on all things AI!
       </p>
       <p className={ styles.paragraph }>
-        Take this challenge and put your instincts to the test!
+        Be informed about ethics, detection, innovation, <br />
+        and the latest developments in artificial intelligence.      
       </p>
-
       <br />
-      <Link to="/vote/1">
-        <PillButton func="START" bgColor="#08609F" borderColor="#08609F"
+      <Link to="/">
+        <PillButton func="EXPLORE" bgColor="#08609F" borderColor="#08609F"
         ></PillButton>
       </Link>
       <br />
@@ -33,4 +33,4 @@ function CYSA() {
   );
 }
 
-export default CYSA;
+export default TheAINews;

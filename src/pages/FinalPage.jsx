@@ -10,15 +10,16 @@ function FinalPage() {
       <br />
       <img  style={{ height: "200px", marginTop: "30px" }}
             src="/how-many.svg" alt=""/>
-      <br /> <br /> 
+      <br />
       <p className={ styles.paragraph }>Did you spot the AI before it spotted you?!</p>
       <br /> <br />
-      <Link to="/vote/1">
+      <Link to="/CYSA">
         <PillButton func="RESTART"></PillButton>
       </Link>
       <br />
       <Link to="/">
-        <PillButton func="HOME"></PillButton>
+        <PillButton func="HOME" bgColor="#08609F" borderColor="#08609F"
+        ></PillButton>
       </Link>
       <br />
       <img  style={{ height: "160px", marginBottom: "0px" }}

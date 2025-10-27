@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { supabase } from "../supabaseClient.js";
 import PillButton from "../components/PillButton/PillButton.jsx";
 import Card from "../components/Card/Card.jsx";
-import NavBar from "../components/NavBar/NavBar.jsx";
+import CYSA_NavBar from "../components/NavBar/CYSA_NavBar.jsx";
 
 export default function VotePage({ votes }) {
   const { id } = useParams();
@@ -27,7 +27,7 @@ export default function VotePage({ votes }) {
 
   return (
     <div style={{ textAlign: "center", justifyContent: "center" }}>
-      <NavBar />
+      <CYSA_NavBar />
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Card imageSrc={votes[currentID].src} />
       </div>
@@ -45,6 +45,7 @@ export default function VotePage({ votes }) {
         onClick={() => handleVote("HUMANMADE")}
       />
       <br />
+      <img src="/bottom-pattern.svg" alt="" />
     </div>
   );
 }

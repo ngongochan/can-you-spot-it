@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { supabase } from "../supabaseClient";
 import RoundButton from "../components/RoundButton/RoundButton.jsx";
-import NavBar from "../components/NavBar/NavBar.jsx";
+import CYSA_NavBar from "../components/NavBar/CYSA_NavBar.jsx";
 import Description from "../components/Description/Description.jsx";
 import SmallCard from "../components/SmallCard/SmallCard.jsx";
 import BarChart from "../components/BarChart/BarChart.jsx";
@@ -63,7 +63,7 @@ export default function ResultPage({ votes }) {
 
   return (
     <div>
-      <NavBar />
+      <CYSA_NavBar />
       <div className={styles.results}>
         <SmallCard imageSrc={currentVote.src} />
         <BarChart
@@ -73,7 +73,7 @@ export default function ResultPage({ votes }) {
         />
       </div>
       <Description desc={currentVote.description} />
-      <RoundButton icon={faArrowRight} color="black" onClick={handleNext} />
+      <RoundButton icon={faArrowRight} color="black" onClick={handleNext} bgColor="#A0D8F6" />
     </div>
   );
 }
